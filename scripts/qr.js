@@ -1,6 +1,6 @@
 
 // Obtenemos la hora de salida
-const horaSalidaTexto = document.getElementById("horaSalida").innerText;
+const horaSalidaTexto = document.getElementById("exit_date").innerText;
 const horaSalida = new Date(horaSalidaTexto).getTime();
 
 // Actualizamos cada segundo
@@ -31,5 +31,18 @@ fetch("../php/getEstudiante.php?id=1")
     .then(data => {
         document.getElementById("nombre").innerText = data.nombre;
         document.getElementById("documento").innerText = data.documento;
+    })
+    .catch(err => console.error("Error al cargar estudiante:", err));
+
+fetch("../php/qr.php?id=1")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("parking_number").innerText = data.parking_number;
+        document.getElementById("code_reserva").innerText = 'COD'+data.id_reserva;
+        document.getElementById("exit_date").innerText = data.exit_date;
+        const qr = document.querySelector('#imgqr');
+        qr.src = `https://api.qrserver.com/v1/create-qr-code/?data=${'COD'+data.id_reserva}&size=200x200`;
+
+
     })
     .catch(err => console.error("Error al cargar estudiante:", err));
