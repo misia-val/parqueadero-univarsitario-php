@@ -1,7 +1,16 @@
 <?php
-require ('../php/conexionSQL.php');
+header('Content-Type: application/json');
+require ('conexionSQL.php');
 date_default_timezone_set('America/Bogota');
 $input = json_decode(file_get_contents("php://input"), true);
+session_start();
+if (!isset($_SESSION["id_estudiante"])) {
+    http_response_code(401);
+    echo json_encode(["error" => "No autenticado"]);
+    exit();
+}
+
+$id = $_SESSION["id_estudiante"];
 
 //Muestra en el frontend en la parte superior el numero de cupos disponibles
 if(isset($input['type']) && isset($input['entryTime']) && isset($input['exitTime'])){
@@ -47,14 +56,14 @@ if(isset($input['type']) && isset($input['entryTime']) && isset($input['exitTime
     ];
 
     echo json_encode($response);
-}else if(isset($input['placa']) && isset($input['vehiculo']) && isset($input['ingreso']) && isset($input['salida']) && isset($input['observations']) && isset($input['estudiante'])){
+}else if(isset($input['placa']) && isset($input['vehiculo']) && isset($input['ingreso']) && isset($input['salida']) && isset($input['observations'])){
     //Inserta los datos, asigna un numero random y el numero del parqueadero al estudiante
     $placa = $input['placa'];
     $vehiculo = $input['vehiculo'];
     $ingreso = $input['ingreso'];
     $salida = $input['salida'];
     $observations = $input['observations'];
-    $estudiante = $input['estudiante'];
+    $estudiante = $id;
     //elimina los espacios de la hora
     $ingreso = str_replace(' ', '', $ingreso);
     $salida = str_replace(' ', '', $salida);

@@ -117,8 +117,7 @@ form.addEventListener('submit', (e) => {
         vehiculo: chosenOptionVehicle,
         ingreso: chosenOptionEntryTime,
         salida: chosenOptionExitTime,
-        observations: observations.value,
-        estudiante: 1
+        observations: observations.value
         //eliminar los espacios de la hora
         // $ingreso = str_replace(' ', '', $ingreso);
         // $salida = str_replace(' ', '', $salida);
@@ -230,7 +229,7 @@ function verifyTotalAvailability() {
 
                     if (parseInt(data['cuposDisponibles1']) <= 0) {
                         numberAvailabilityMoto.classList.add('noDisponible');
-                        numberAvailabilityMoto.classList.remove('disponible')
+                        numberAvailabilityMoto.classList.remove('disponible');
                         console.log('va en rojo')
                     } else {
                         numberAvailabilityMoto.classList.add('disponible');
