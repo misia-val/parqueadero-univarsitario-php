@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Acceso</title>
+  <link rel="stylesheet" href="../styles/qr.css?v=1">
+</head>
+<body>
+  <header>
+    <h2>QR Acceso</h2>
+  </header>
+
+  <div class="card">
+
+    <!-- Aquí se genera el QR -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.wikipedia.org/&size=200x200" alt="QR Code">
+
+    <!-- Información del estudiante (rellenada por JS) -->
+    <p></p>
+    <p>Nombre: <b id="nombre"></b></p>
+    <p>Documento: <span id="documento"></span></p>
+
+    <!-- Nueva info añadida -->
+    <p>Número de Parqueadero: <b>25</b></p>
+    <p>Número de QR: <b>COD01</b></p>
+
+    <!-- Hora de salida -->
+    <p>Hora de Salida: <b id="horaSalida">2025-10-05T23:00:00</b></p>
+
+    <!-- Contador -->
+    <div class="countdown">
+      ⏳ Tiempo restante: 
+      <span id="horas">00</span>h 
+      <span id="minutos">00</span>m 
+      <span id="segundos">00</span>s
+    </div>
+
+    <p>Válido hasta: 23:00:00</p>
+
+    <!-- 🔙 Botón Atrás -->
+    <a href="indexEstudiante.html" class="back-btn">← Atrás</a>
+  </div>
+
+  <script src="../scripts/qr.js"></script>
+
+</body>
+</html>

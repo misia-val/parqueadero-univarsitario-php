@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+}
+
+main {
+    width: 100%;
+    height: 100dvh;
+    background-color: rgb(74, 139, 244);
+}
+
+.studentInterface {
+    max-width: 350px;
+    /* min-width: 350px; */
+    height: 100%;
+    background-image: url("../imgs/backgroundMain.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    border-radius: 15px;
+
+
+
+    .containerOption {
+        width: 55px;
+        height: 62px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        background-color: #1E1E1E;
+        /* background-color: red; */
+        margin-top: 328px;
+        margin-left: 80px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 3px;
+        text-decoration: none;
+
+        .bookOption {
+            width: 100%;
+            height: 100%;
+            background-color: #2A352F;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .bookIcon {
+                width: 40px;
+            }
+        }
+
+        .bookText {
+            color: #7B7A7A;
+            font-size: 7px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            outline: none;
+        }
+    }
+}
+
+/* data interface */
+.studentInterface1 {
+    max-width: 302px;
+    min-width: 300px;
+    height: 100%;
+    background-image: url('../imgs/backgroundData.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    border-radius: 15px;
+
+    .counterInfo {
+        /* border: 1px solid white; */
+        margin-top: 122px;
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        gap: 10px;
+
+        .greenCircle {
+            width: 14px;
+            height: 14px;
+            background-color: #247518;
+            border-radius: 200px;
+        }
+
+        .containerMoto {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .counterMoto {
+                margin-left: 60px;
+            }
+        }
+
+        .containerCar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .counterCar {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    .containerKindOfVehicle {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2px;
+        /* border: 1px solid white; */
+        position: relative;
+        user-select: none;
+
+        .modalOptionsVehicle {
+            position: absolute;
+            background-color: #2A352F;
+            list-style-type: none;
+            left: 35%;
+            top: 25px;
+            border-radius: 8px;
+            width: 100px;
+            text-align: center;
+            z-index: 100;
+            /* display: none; */
+
+            .line {
+                display: block;
+                width: 100%;
+            }
+
+            li {
+                padding: 5px 0px;
+                cursor: pointer;
+            }
+
+            .motoOption:hover {
+                background-color: rgba(255, 255, 255, 0.162);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .carOption:hover {
+                background-color: rgba(255, 255, 255, 0.162);
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+
+        .containerOptions {
+            display: flex;
+            align-items: center;
+            /* border: 1px solid wheat; */
+            cursor: pointer;
+
+            .vehicleText {
+                font-size: 17px;
+            }
+        }
+
+        .dash {
+            /* font-size: 20px;
+            letter-spacing: 20px;
+            letter-spacing: 2px;
+            font-weight: 800; */
+            letter-spacing: 2px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: block;
+            width: 45px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+
+        }
+    }
+
+    .containerBooking {
+        /* display: none; */
+
+        .containerTime {
+            /* border: 1px solid white; */
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 6px;
+            position: relative;
+
+            .modalOptionsTime {
+                position: absolute;
+                background-color: #2A352F;
+                list-style-type: none;
+                top: 30px;
+                border-radius: 5px;
+                width: 80px;
+                height: 192px;
+                text-align: center;
+                font-size: 18px;
+                overflow-y: scroll;
+
+                li {
+                    padding: 5px 0px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.162);
+                    }
+                }
+
+            }
+
+            .modalOptionsTime::-webkit-scrollbar {
+                width: 6px;
+                /* Cambia el ancho del scroll */
+            }
+
+            .modalOptionsTime::-webkit-scrollbar-track {
+                background: transparent;
+                /* Fondo del track */
+            }
+
+            .modalOptionsTime::-webkit-scrollbar-thumb {
+                background-color: #888;
+                /* Color del scroll */
+                border-radius: 4px;
+                border: 1px solid #2A352F;
+                /* Opcional: borde para integrarlo con el fondo */
+            }
+
+            /* .entryTimeList {
+                display: none;
+            } */
+
+            /* .exitTimeList {
+                display: none;
+            } */
+
+            p {
+                font-size: 20px;
+            }
+
+
+            .containerStart {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                .dashDot {
+                    font-size: 15px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    display: block;
+                    width: 45px;
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    outline: none;
+                }
+            }
+
+            .containerEnd {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                .dashDot1 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    display: block;
+                    width: 45px;
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    outline: none;
+                }
+            }
+        }
+
+        textarea {
+            resize: none;
+            width: 85%;
+            height: 80px;
+            margin: 30px auto;
+            padding: 5px;
+            display: block;
+            font-size: 11px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        .bookButton {
+            /* width: 80; */
+            margin: 0 auto;
+            padding: 13px 35px;
+            background-color: #15440E;
+            color: white;
+            border-radius: 6px;
+            display: block;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #3F633A;
+            }
+        }
+
+        .additionalInfo {
+            /* border: 1px solid white; */
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* display: flex; */
+            justify-content: center;
+            margin-top: 16px;
+            gap: 31px;
+            /* display: none; */
+
+            .codeContainer,
+            .parkingContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* gap:3px; */
+
+                p {
+                    font-size: 15px;
+
+                }
+
+                span {
+                    font-size: 70px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    /* font-weight: 800; */
+                }
+            }
+        }
+    }
+
+    .containerNoParking {
+        /* border: 1px solid white; */
+        text-align: center;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        padding: 40px;
+        /* display: none; */
+
+        .ups {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .numberParkingAvailable {
+            font-size: 80px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .comeBack {
+            background: green;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            padding: 9px 0 0;
+            font-size: 18px;
+            margin: 20px auto;
+            text-align: center;
+            display: block;
+            width: 160px;
+            height: 40px;
+            color: white;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 8px;
+                top: 8px;
+            }
+        }
+    }
+}
+
+.showHide {
+    display: none;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+}
+
+
+/* Guard interface */
+.guardInterface {
+    max-width: 300px;
+    min-width: 300px;
+    height: 100%;
+    background-image: url('../imgs/backgroundGuard.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid green;
+    margin: 0 auto;
+    border-radius: 15px;
+
+    .counterInfo {
+        /* border: 1px solid white; */
+        margin-top: 122px;
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        gap: 10px;
+
+        .greenCircle {
+            width: 14px;
+            height: 14px;
+            background-color: #247518;
+            border-radius: 200px;
+        }
+
+        .containerMoto {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .counterMoto {
+                margin-left: 80px;
+            }
+        }
+
+        .containerCar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .counterCar {
+                margin-left: 79px;
+            }
+        }
+    }
+
+    .textCode {
+        text-align: center;
+        color: white;
+        font-size: 23px;
+        margin-top: 35px;
+    }
+
+    .inputNumber {
+        display: block;
+        margin: 15px auto;
+        width: 110px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: transparent;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        outline: none;
+        text-align: center;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .validateButton {
+        display: block;
+        width: 150px;
+        height: 45px;
+        background-color: #15440E;
+        border: none;
+        border-radius: 10px;
+        margin: 30px auto 0;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .containerInfoStudent {
+        color: white;
+        margin: 50px auto 0;
+        padding: 0 20px;
+        font-size: 18px;
+        text-align: center;
+        /* display: flex; */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>U'Wallet Front</title>
+  <link rel="stylesheet" href="../styles/indexEstudiante.css?v=1">
+</head>
+
+<body>
+  <header>
+    <h2>U'Wallet</h2>
+    <button class="logout-btn" onclick="window.location.href='../index.html'">Cerrar sesión</button>
+  </header>
+
+  <div class="card">
+    <h3 id="nombre"></h3>
+    <p>Documento: <b id="documento"></b></p>
+    <p>Rol: <b id="rol"></b></p>
+    <p>Cargo: <b id="carrera"></b></p>
+  </div>
+
+  <div class="card">
+    <p class="section-title">ACCESOS</p>
+    <div class="access">
+      <a class="service-btn" href="#">QR</a>
+      <a class="service-btn" href="reservas.html">Reservas Parqueadero</a>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="section-title">SERVICIOS</p>
+    <div class="services">
+      <a href="#" class="service-btn">Bicicletero</a>
+      <a href="#" class="service-btn">Biblioteca</a>
+      <a href="#" class="service-btn">Equipos</a>
+    </div>
+  </div>
+  <script src="../scripts/indexEstudiante.js"></script>
+</body>
+
+</html>

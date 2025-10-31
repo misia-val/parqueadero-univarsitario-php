@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Vigilante</title>
+  <link rel="stylesheet" href="../styles/indexEstudiante.css?v=1">
+</head>
+
+<body>
+  <header>
+    <h2>U'Wallet - Vigilante</h2>
+    <button class="logout-btn" onclick="window.location.href='../index.html'">Cerrar sesión</button>
+  </header>
+
+  <!-- Card con info del vigilante -->
+   <div class="card">
+    <h3 id="nombre"></h3>
+    <p>Documento: <b id="documento"></b></p>
+    <p>Rol: <b id="rol"></b></p>
+    <p>Turno: <b id="turno"></b></p>
+  </div>
+
+  <!-- Menú principal del vigilante -->
+  <div class="card">
+    <p class="section-title">MENÚ</p>
+    <div class="services">
+      <!-- Botón Gestor QR -->
+      <a href="qrGestor.html" class="service-btn">Gestor QR</a>
+
+      <!-- Botón Info Parqueadero -->
+      <a href="info_parqueadero.html" class="service-btn">Info Parqueadero</a>
+
+      <!-- Botón Soporte -->
+      <a href="soporte.html" class="service-btn">Soporte</a>
+    </div>
+  </div>
+  <script src="../scripts/indexVigilante.js"></script>
+</body>
+
+</html>

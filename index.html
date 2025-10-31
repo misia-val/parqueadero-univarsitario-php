@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U'Wallet - Iniciar Sesión</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .login-box {
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      text-align: left;
+      margin: 10px 0 5px;
+      color: #000;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #d9d9d9;
+      border-radius: 14px;
+      background-color: #f7fbff;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #000e24;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #000e24;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: #666;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #FFD740;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 22px;
+    }
+
+    .bottom-bar i {
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo U'Wallet">
+    <h2>U'Wallet</h2>
+  </div>
+
+  <div class="login-box">
+    <form action="php/login.php" method="post">
+      <label for="usuario">Usuario (correo) *</label>
+      <input type="email" id="usuario" name="usuario" placeholder="correo@ejemplo.com" required>
+
+      <label for="password">Password *</label>
+      <input type="password" id="password" name="password" placeholder="********" required>
+
+      <button type="submit">INGRESAR</button>
+
+      <div class="links">
+        <a href="#">CAMBIAR CONTRASEÑA</a>
+        <a href="#">POLÍTICA DE PRIVACIDAD</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="bottom-bar">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <i class="fa-solid fa-person"></i>
+  </div>
+
+</body>
+</html>

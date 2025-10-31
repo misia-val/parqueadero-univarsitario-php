@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reservas.css">
+    <title>Student</title>
+</head>
+
+<body>
+    <main>
+        <section class='studentInterface1'>
+            
+            <h2>Datos de la Reserva</h2>
+            <!-- 🔥 Cupos disponibles -->
+            <div class="cupos-container">
+                <div class="cupos-card">
+                    <h3>Motos</h3>
+                    <p class="counterMoto">---</p>
+                </div>
+                <div class="cupos-card">
+                    <h3>Carros</h3>
+                    <p class="counterCar">---</p>
+                </div>
+            </div>
+
+            <form id='formulario'>
+                <!-- <textarea name="vehi" require></textarea> -->
+                <label for="vehiculo">Tipo de vehículo</label>
+                <select name="vehiculo" id="vehiculo">
+                    <option class="default" value="default">Seleccione...</option>
+                    <option class="motoOption" value="moto">Moto</option>
+                    <option class="carOption" value="carro">Carro</option>
+                </select>
+
+                <!-- Tiene un display none para esconder la info -->
+                <div class="containerBooking">
+                        
+                    <label for="ingreso">Hora de ingreso</label>
+                    <input type="time" name="fromTime" id="ingreso">
+                        
+                    <label for="salida">Fecha y hora de salida</label>
+                    <input type="time" name="fromTime" id="salida">
+                
+
+                    <label id='label-placa' for="placa">Placa</label>
+                    <input type="text" name="placa" id="placa" placeholder='Digite su placa aqui' pattern=".{6}" title="La placa debe tener exactamente 6 caracteres." required>
+                      
+                    <label id='label-observations' for="descripcion">Observaciones</label>
+                    <textarea name="observations" id="observations" placeholder="Observaciones: En este campos digite si lleva  un computador o algo para registrar (si es asi, digite la marca, color, etc del computador)"></textarea>
+                        
+                    <button type="submit" class="bookButton" name='enviar'>Reservar</button>
+                        
+                        <!-- Tiene un display none para esconder la info -->
+                    <div class="additionalInfo showHide">
+                        <div class="codeContainer">
+                            <p class="codeText">Codigo:</p>
+                            <span id="codeNumber">21</span>
+                        </div>
+
+                        <div class="parkingContainer">
+                            <p class="parkingText"># Parqueadero:</p>
+                            <span id="parkingNumber">21</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiene un display none para esconder la info -->
+                <div class="containerNoParking showHide">
+                    <p class="ups">Upss, no hay cupos disponibles</p>
+                    <p class="">Cupos proximos a desocupar desde las <span id="nextParkingAvailableTime">21:45</span>:</p>
+                    <span class="numberParkingAvailable">5</span>
+                    <div class='comeBack'><img src="../imgs/arrowLeft.png" alt="">Volver</div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="../scripts/reservas.js"></script>
+</body>
+</html>
