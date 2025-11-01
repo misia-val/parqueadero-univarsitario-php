@@ -4,33 +4,41 @@
   <meta charset="UTF-8">
   <title>Panel Vigilante</title>
   <link rel="stylesheet" href="../styles/qrGestor.css?v=1">
-
+  <!-- Librería de lector QR -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
 
   <div class="menu-vigilante">
     <h2>Panel del Vigilante</h2>
 
-    <!-- Sección para escanear o escribir código -->
+    <!-- Sección de escaneo -->
     <div class="qr-section">
-      <p><strong>Escanee el QR o escriba el código del estudiante:</strong></p>
-      <input type="text" placeholder="Ingrese código QR o ID">
-      <button>Verificar</button>
+      <label for="id_reservas">ID Reserva *</label>
+      <input type="text" id="id_reservas" name="id_reservas" placeholder="Ingrese código QR o ID" required>
+      <button id="btnVerificar">Verificar</button>
+
+      <h3>O escanee el código QR:</h3>
+      <div id="reader" style="width: 300px; margin:auto;"></div>
     </div>
 
-    <!-- Información del estudiante (ejemplo de salida) -->
-    <div class="info-estudiante">
-      <p><span class="highlight">Nombre:</span> Juan Pérez</p>
-      <p><span class="highlight">Hora Ingreso:</span> 08:15 AM</p>
-      <p><span class="highlight">Hora Salida:</span> 12:30 PM</p>
-      <p><span class="highlight">Placa Vehículo:</span> ABC-123</p>
-      <p><span class="highlight">Tipo Vehículo:</span> Carro</p>
-      <p><span class="highlight">Computador:</span> Sí</p>
+    <!-- Información del estudiante -->
+    <div class="info-estudiante" id="infoEstudiante" style="display:none;">
+      <p><b>Nombre:</b> <span id="nombre"></span></p>
+      <p><b>Hora Ingreso:</b> <span id="horaIngreso"></span></p>
+      <p><b>Hora Salida:</b> <span id="horaSalida"></span></p>
+      <p><b>Placa Vehículo:</b> <span id="placa"></span></p>
+      <p><b>Tipo Vehículo:</b> <span id="tipoVehiculo"></span></p>
+      <p><b>Computador:</b> <span id="computador"></span></p>
     </div>
+
+    <!-- Mensaje de error -->
+    <div id="mensajeError" style="color: red; display:none;"></div>
 
     <!-- Botón salir -->
-    <a href="indexVigilante.html" class="salir-btn">Salir</a>
+    <a href="indexVigilante.html" class="salir-btn">← Salir</a>
   </div>
 
+  <script src="../scripts/qrGestor.js"></script>
 </body>
 </html>
